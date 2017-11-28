@@ -211,7 +211,7 @@ void homeZenith() {
   digitalWrite(MOTZECWCCW,LOW);
   for (iCount=0; iCount<1; iCount++){// should be home in 180 deg worth of steps
     optoStateZE = digitalRead(OPTOPINZE);
-    if (optoStateZE == LOW) { // HIGH is blocked (home)
+    if (optoStateZE == HIGH) { // HIGH is blocked (home)
       Serial.println("Zenith homing sensor is HIGH");
       break; // now home
     }
